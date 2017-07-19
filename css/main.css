@@ -104,6 +104,10 @@ main {
 
 /*****************************/
 /* Featured projects section */
+.featured-work h2 {
+  padding-left: 10px;
+}
+
 .featured-grid {
   display: flex;
   flex-wrap: wrap;
