@@ -7,44 +7,58 @@
 
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" media="screen and (min-width:500px)" href="css/over500.css">
+    <link rel="stylesheet" media="screen and (min-width:750px)" href="css/over750.css">
+    <link rel="stylesheet" media="screen and (min-width:960px)" href="css/over960.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Nunito:200,300,400|Cabin" rel="stylesheet">
 
   </head>
   <body>
 
-    <div class="container">
-
-      <header class="profile-title">
+    <header class="profile-heading">
+      <div class="heading-content">
         <div class="logo">
           <img src="img/udacity.svg" alt="Udacity logo">
         </div>
         <div class="title">
           <h1>Marko Burazin</h1>
-          <p class="lead">Front-End Kung Fu Master</p>
+          <p class="lead">&ltFull Stack Developer/&gt</p>
         </div>
-      </header>
+      </div>
+    </header>
 
+    <div class="container">
       <main>
         <aside class="banner">
-          <img src="http://loremflickr.com/320/240/dog?random=4" alt="Profile main">
+          <picture>
+            <source media="(min-width: 750px)" srcset="img/hero_large.jpg 1x, img/hero_large_2x.jpg 2x">
+            <source media="(min-width: 500px)" srcset="img/hero_medium.jpg 1x, img/hero_medium_2x.jpg 2x">
+            <img class="hero-img"
+                 srcset="img/hero_small.jpg 1x, img/hero_small_2x.jpg 2x"
+                 src="img/hero_small_2x.jpg" alt="Main image showing MAC desktop computer">
+          </picture>
         </aside>
 
         <section class="featured-work">
           <h2>Featured Work</h2>
-          <article class="featured-project">
-            <img src="http://loremflickr.com/320/240/dog?random=1" alt="Appify project snapshot">
-            <h3>Appify</h3>
-            <p class="featured-link"><a href="#">https://github.com/mburazin/appify</a></p>
-          </article>
-          <article class="featured-project">
-            <img src="http://loremflickr.com/320/240/dog?random=2" alt="Sunflower project snapshot">
-            <h3>Sunflower</h3>
-            <p class="featured-link"><a href="#">https://github.com/mburazin/sunflower</a></p>
-          </article>
-          <article class="featured-project">
-            <img src="http://loremflickr.com/320/240/dog?random=3" alt="Bokeh project snapshot">
-            <h3>Bokeh</h3>
-            <p class="featured-link"><a href="#">https://github.com/mburazin/bokeh</a></p>
-          </article>
+          <div class="featured-grid">
+            <article class="featured-project">
+              <img src="http://lorempixel.com/320/240?random=2" alt="Appify project snapshot">
+              <h3>Appify</h3>
+              <p class="featured-link"><a href="#">https://github.com/mburazin/appify</a></p>
+            </article>
+            <article class="featured-project">
+              <img src="http://lorempixel.com/320/240?random=3" alt="Sunflower project snapshot">
+              <h3>Sunflower</h3>
+              <p class="featured-link"><a href="#">https://github.com/mburazin/sunflower</a></p>
+            </article>
+            <article class="featured-project">
+              <img src="http://lorempixel.com/320/240?random=4" alt="Bokeh project snapshot">
+              <h3>Bokeh</h3>
+              <p class="featured-link"><a href="#">https://github.com/mburazin/bokeh</a></p>
+            </article>
+          </div>
         </section>
       </main>
 
