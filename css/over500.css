@@ -1,11 +1,42 @@
+/**********************************************/
+/* Global settings, i.e. fonts, margins, etc. */
+/* Increase font size globally */
 body {
-  font-size: 16px;
+  font-size: 18px;
 }
 
+
+/******************/
+/* Profile header */
+.logo svg {
+  width: 60px;
+  height: 60px;
+}
+
+
+/*****************************/
+/* Featured projects section */
 .featured-project {
   width: 50%;
 }
 
 .featured-link {
   font-size: 12px;
+}
+
+/*******************************/
+/* About Me section            */
+.about-flex {
+  /* Turn off flexbox, so we can float photo left */
+  display: block;
+}
+
+.about-photo {
+  width: 30%;
+  float: left;
+  margin: 0 1.5em 1em 0;
+}
+
+.about-text {
+  padding: 0;
 }

@@ -1,4 +1,5 @@
-
+/**********************************************/
+/* Global settings, i.e. fonts, margins, etc. */
 /* Size of elements including up to borders */
 html {
   box-sizing: border-box;
@@ -8,12 +9,12 @@ html {
   box-sizing: inherit;
 }
 
-/**********************************************/
-/* Global settings, i.e. fonts, margins, etc. */
 body {
-  font-family: 'Lato', Verdana, Geneva, sans-serif;
-  font-size: 14px;
-  line-height: 1.2em;
+  margin: 0;
+  font: 16px/1.4em "Lato", Verdana, Geneva, sans-serif;
+}
+
+p {
   margin: 0;
 }
 
@@ -22,73 +23,107 @@ h2,
 h3,
 h4 {
   margin: 0;
-  font-weight: normal;
-  line-height: 100%;
 }
 
 h1 {
   margin: 0 0 0.2em;
-  font-size: 1.8em;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 200;
+  font: 200 1.8em/100% "Nunito", sans-serif;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 2em;
-  font-weight: normal;
-  font-family: 'Nunito', sans-serif;
+  margin: 0 0 1em;
+  padding: 0 0 0 10px;
+  font: normal 2em/100% "Nunito", sans-serif;
   color: #7d97ad;
-  margin: 0 0 0.8em;
 }
 
 h3 {
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: normal;
   margin: 0.2em 0 0.1em;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 100%;
+  text-transform: uppercase;
 }
 
-main {
-  padding: 0.6em;
+h4 {
+  margin: 0 0 0.3em;
 }
+
+.container {
+  padding: 0 0.6em;
+}
+
+section {
+  margin: 3em 0;
+}
+
 
 /******************/
 /* Profile header */
 .profile-heading {
+    margin: 0;
     background-color: #eeebd3;
-    border-bottom: 3px solid #f7c548;
-    margin: 0 0 2em;
 }
 
-.heading-content {
+.heading-flex {
+  height: auto;
+  padding: 1em;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  height: auto;
-  padding: 1em;
 }
 
 .title {
-  text-align: right;
   width: 80%;
+  text-align: right;
 }
 
 .logo {
-  text-align: left;
   width: 20%;
+  text-align: left;
 }
 
+.logo svg,
 .logo img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .lead {
   margin: 0;
-  font-family: 'Cabin', sans-serif;
-  font-size: 1.2em;
+  font: 1.2em "Cabin", sans-serif;
 }
+
+
+/**************************************************/
+/* Bootstrap navbar customizations and overrides  */
+.navbar {
+  margin: 0 0 4em;
+  background-color: #f7c548;
+}
+
+.navbar .navbar-nav {
+  float: none;
+  display: block;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  border: none;
+  text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #337ab7;
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+
+.navbar-toggle {
+  margin-right: 25px;
+}
+
 
 /*************************************/
 /* Main banner containing hero image */
@@ -96,29 +131,23 @@ main {
   width: 100%;
   border: 1px solid #eee;
   box-shadow: 0 0 25px #ddd;
+  border-radius: 10px;
 }
 
-.banner {
-  margin: 0 0 3em;
-}
 
 /*****************************/
 /* Featured projects section */
-.featured-work h2 {
-  padding-left: 10px;
-}
-
-.featured-grid {
+.featured-flex {
+  border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
+  background-color: #eee;
 }
 
 .featured-project {
-  background-color: #eee;
-  margin-bottom: 2.5em;
+  width: 100%;
   padding: 2em 0;
   text-align: center;
-  width: 100%;
 }
 
 .featured-project img {
@@ -136,13 +165,90 @@ h3 {
 
 .featured-link a:link {
   text-decoration: none;
-  color: #0184f4;
+  color: #337ab7;
 }
 
 .featured-link a:visited {
-  color: #0184f4;
+  color: #337ab7;
 }
 
 .featured-link a:hover {
   color: #7d97ad;
+}
+
+
+/*******************************/
+/* Skills/Technologies section */
+.skills-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo-item {
+  width: 50%;
+  margin: 0 0 2.5em;
+  text-align: center;
+}
+
+.logo-item svg {
+  max-width: 100%;
+  height: 100px;
+}
+
+
+/*******************************/
+/* About Me section            */
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.about-photo {
+  width: 100%;
+  margin: 0 0 2.5em;
+  text-align: center;
+}
+
+.about-text {
+  width: 100%;
+  padding: 0 0 0 5%;
+}
+
+.about-photo img {
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #aaa;
+}
+
+
+/*******************************/
+/* Footer                      */
+.profile-footer {
+  padding: 1em;
+  border-top: 3px solid #f7c548;
+  background-color: #eeebd3;
+}
+
+.profile-footer ul {
+  list-style: none;
+  text-align: center;
+}
+
+.profile-footer ul li {
+  padding: 0 1em;
+  display: inline-block;
+}
+
+.footer-link {
+  display: inline-block;
+}
+
+.footer-logo {
+  height: 30px;
+}
+
+.copyright {
+  font-size: 0.8em;
+  text-align: center;
 }

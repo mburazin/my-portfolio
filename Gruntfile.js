@@ -10,6 +10,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     responsive_images: {
 
+      // resizing rules for hero (banner) image (small, medium & large viewports)
       banner_large: {
         options: {
           engine: 'gm',
@@ -29,7 +30,7 @@ module.exports = function(grunt) {
 
         files: [{
           expand: true,
-          src: ['*_large.{gif,jpg}'],
+          src: ['*_large.{gif,jpg,png}'],
           cwd: 'img_src/banner',
           dest: 'img/'
         }]
@@ -54,7 +55,7 @@ module.exports = function(grunt) {
 
         files: [{
           expand: true,
-          src: ['*_medium.{gif,jpg}'],
+          src: ['*_medium.{gif,jpg,png}'],
           cwd: 'img_src/banner',
           dest: 'img/'
         }]
@@ -79,12 +80,13 @@ module.exports = function(grunt) {
 
         files: [{
           expand: true,
-          src: ['*_small.{gif,jpg}'],
+          src: ['*_small.{gif,jpg,png}'],
           cwd: 'img_src/banner',
           dest: 'img/'
         }]
       },
 
+      // resizing rules for images in "Featured Work" section
       featured: {
         options: {
           engine: 'gm',
@@ -110,8 +112,36 @@ module.exports = function(grunt) {
 
         files: [{
           expand: true,
-          src: ['*.{gif,jpg}'],
+          src: ['*.{gif,jpg,png}'],
           cwd: 'img_src/featured',
+          dest: 'img/'
+        }]
+      },
+
+      // resizing rules for images in "About Me" section
+      about_me: {
+        options: {
+          engine: 'gm',
+          sizes: [
+            {
+              width: 260,
+              quality: 100
+            },
+            {
+              width: 420,
+              quality: 100
+            },
+            {
+              width: 580,
+              quality: 60
+            }
+          ]
+        },
+
+        files: [{
+          expand: true,
+          src: ['*.{gif,jpg,png}'],
+          cwd: 'img_src/about-me',
           dest: 'img/'
         }]
       }
