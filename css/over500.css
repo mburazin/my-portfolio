@@ -16,21 +16,12 @@ body {
 
 /*****************************/
 /* Featured projects section */
-.featured-project {
-  width: 50%;
-}
-
 .featured-link {
   font-size: 12px;
 }
 
 /*******************************/
 /* About Me section            */
-.about-flex {
-  /* Turn off flexbox, so we can float photo left */
-  display: block;
-}
-
 .about-photo {
   width: 30%;
   float: left;

@@ -66,21 +66,16 @@ section {
     background-color: #eeebd3;
 }
 
-.heading-flex {
+.heading {
   height: auto;
   padding: 1em;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 .title {
-  width: 80%;
   text-align: right;
 }
 
 .logo {
-  width: 20%;
   text-align: left;
 }
 
@@ -114,6 +109,8 @@ section {
   text-align: center;
 }
 
+/* Using classes with element names to override
+   default bootstrap behaviour */
 .navbar-default .navbar-nav > li > a {
   color: #337ab7;
   font-size: 0.85em;
@@ -137,15 +134,12 @@ section {
 
 /*****************************/
 /* Featured projects section */
-.featured-flex {
+.featured-projects {
   border-radius: 10px;
-  display: flex;
-  flex-wrap: wrap;
   background-color: #eee;
 }
 
 .featured-project {
-  width: 100%;
   padding: 2em 0;
   text-align: center;
 }
@@ -179,13 +173,7 @@ h3 {
 
 /*******************************/
 /* Skills/Technologies section */
-.skills-flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .logo-item {
-  width: 50%;
   margin: 0 0 2.5em;
   text-align: center;
 }
@@ -198,12 +186,6 @@ h3 {
 
 /*******************************/
 /* About Me section            */
-.about-flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-
 .about-photo {
   width: 100%;
   margin: 0 0 2.5em;

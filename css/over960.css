@@ -1,5 +1,0 @@
-/* Fix content of the webpage to specific width for this breakpoint */
-.container {
-  width: 960px;
-  margin: 0 auto;
-}
