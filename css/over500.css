@@ -8,7 +8,7 @@ body {
 
 /******************/
 /* Profile header */
-.logo svg {
+.logo-img {
   width: 60px;
   height: 60px;
 }
@@ -16,7 +16,7 @@ body {
 
 /*****************************/
 /* Featured projects section */
-.featured-link {
+.project-link {
   font-size: 12px;
 }
 

@@ -1,3 +1,5 @@
+/* Using classes with element names to override
+   default bootstrap behaviour - spread links in navbar evenly */
 .navbar-default .navbar-nav > li {
-  width: 33.3333%
+  width: 33.3333%;
 }
