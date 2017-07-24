@@ -140,6 +140,18 @@ h4 {
   margin-right: 25px;
 }
 
+/* The following two selectors and styles are used to
+   disable negative margin on the Bootstrap navbar
+   because we are not using the Bootstrap's grid
+   system */
+.navbar-header {
+  margin-right: 0px !important;
+}
+
+.navbar-toggle {
+  margin-right: 0px;
+}
+
 
 /*************************************/
 /* Main banner containing hero image */
